@@ -64,10 +64,7 @@ function createMaxDigitForm() {
     });
   }
 }
-}
 
-function createAlignmentForm() {
-  const mainContent = document.querySelector('.main-content');
 function createAlignmentForm() {
   const mainContent = document.querySelector('.main-content');
   if (mainContent) {
@@ -120,7 +117,7 @@ function createAlignmentForm() {
     blocks.forEach(block => {
       const radios = document.querySelectorAll(`input[name="${block.id}"]`);
       radios.forEach(radio => {
-        radio.addEventListener('mouseout', function() {
+        radio.addEventListener('change', function() {
           if (this.checked) {
             const element = document.querySelector(block.selector);
             if (element) {
@@ -139,7 +136,6 @@ function createAlignmentForm() {
       });
     });
   }
-}
 }
 
 function restoreAlignmentSettings() {
